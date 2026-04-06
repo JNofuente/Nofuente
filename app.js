@@ -2,15 +2,27 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebas
 import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-storage.js";
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
 // --- Replace with your Firebase Project Config ---
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT.appspot.com",
-    messagingSenderId: "...",
-    appId: "..."
+  apiKey: "AIzaSyBFKDDG2xTXUUbzcraeF_ZpXR9myYxFcR8",
+  authDomain: "our-family-scrapbook-ae0ca.firebaseapp.com",
+  projectId: "our-family-scrapbook-ae0ca",
+  storageBucket: "our-family-scrapbook-ae0ca.firebasestorage.app",
+  messagingSenderId: "328220018179",
+  appId: "1:328220018179:web:4e9eddbf8bbaca9173f036",
+  measurementId: "G-3YEQDTFH6B"
 };
+
+
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -82,3 +94,4 @@ window.deleteMemory = async (id) => {
         await deleteDoc(doc(db, "memories", id));
     }
 };
+
