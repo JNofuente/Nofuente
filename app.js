@@ -13,13 +13,13 @@ import { getAnalytics } from "firebase/analytics";
 
 // --- Replace with your Firebase Project Config ---
 const firebaseConfig = {
-  apiKey: "AIzaSyBFKDDG2xTXUUbzcraeF_ZpXR9myYxFcR8",
-  authDomain: "our-family-scrapbook-ae0ca.firebaseapp.com",
-  projectId: "our-family-scrapbook-ae0ca",
-  storageBucket: "our-family-scrapbook-ae0ca.firebasestorage.app",
-  messagingSenderId: "328220018179",
-  appId: "1:328220018179:web:4e9eddbf8bbaca9173f036",
-  measurementId: "G-3YEQDTFH6B"
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID
 };
 
 
